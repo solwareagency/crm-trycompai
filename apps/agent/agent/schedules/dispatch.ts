@@ -10,7 +10,7 @@ import { brief, drainAll, taskAuth } from "../lib/dispatch";
 import { reconcileStaleTasks } from "../lib/stale-tasks";
 
 export default defineSchedule({
-	cron: "* * * * *",
+	cron: "30 2 * * *",
 	async run({ receive, waitUntil, appAuth }) {
 		waitUntil(
 			Promise.all([
